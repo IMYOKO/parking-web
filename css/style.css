@@ -25,7 +25,6 @@
 .header .title {
 	color: #fff;
 	font-size: 18px;
-	font-weight: bold;
 }
 
 .car-form h2 {
@@ -96,18 +95,23 @@
 }
 
 .button-wrapper {
-	padding: 30px 20px 10px;
+	padding: 30px 30px 10px;
+}
+.padding-70 {
+	padding: 30px 60px 10px;
 }
 .button {
 	width: 100%;
-	height: 40px;
-	line-height: 40px;
+	height: 44px;
+	line-height: 44px;
 	padding: 0;
 	margin: 0;
-	border-radius: 40px;
+	font-size: 18px;
+	border-radius: 44px;
 	color: #fff;
+	display: inline-block;
 	border: 1px solid #366afc;
-	background: linear-gradient(to right, #56a0ff , #3a72fd);
+	background: linear-gradient(to right, #56a0ff, #3a72fd);
 }
 
 .history-list {
@@ -223,4 +227,117 @@
 }
 .key-word .key-body .key-box .key-item:active {
 	background: #999;
+}
+
+/* 确认结果 */
+.result-wrapper {
+	text-align: center;
+	padding-top: 44px;
+}
+.result-content {
+	padding: 40px 8% 0;
+}
+.result-content .tips {
+	font-size: 16px;
+	color: #000;
+	line-height: 20px;
+	margin-bottom: 25px;
+}
+.result-content .tips-02 {
+	color: #333;
+	font-size: 16px;
+	line-height: 20px;
+	margin-bottom: 100px;
+}
+
+/* 去缴费 */
+.pay-content {
+	padding: 30px 20px 40px;
+	text-align: left;
+	/* background: #fff; */
+}
+.pay-content .pay-box {
+	color: #fff;
+	border-radius: 10px;
+	background: #fff;
+	box-shadow: 0px 4px 20px #cbcbcb;
+	overflow: hidden;
+}
+.pay-content .pay-box-top {
+	padding: 20px 30px;
+	font-size: 18px;
+	line-height: 22px;
+	background: linear-gradient(to right,#3a72fd, #56a0ff);
+	position: relative;
+}
+.pay-box-top .park-addr {
+	margin-top: 10px;
+	font-size: 16px;
+	line-height: 20px;
+	color: rgba(255, 255, 255, .6);
+}
+.pay-content .pay-box-bottom {
+	color: #333;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 25px 30px 30px;
+}
+.pay-content .pay-list li {
+	margin-bottom: 15px;
+}
+.pay-content .pay-list li:last-child {
+	margin-bottom: 0;
+}
+.pay-content .pay-list li .money {
+	color: #f31136;
+	margin-right: 30px;
+}
+.pay-content .pay-list li .money em {
+	font-size: 20px;
+}
+.pay-content .pay-list li .youhui {
+	color: #e2aa55;
+}
+.pay-content .pay-list li.quan >span {
+	letter-spacing: 4.5px;
+}
+.pay-content .pay-list li .quan {
+	color: #999;
+}
+
+/* 缴费结果 */
+.pay-result-content {
+	color: #333;
+	text-align: center;
+	padding: 40px 25px 20px;
+}
+.pay-result-content .pay-result {
+	font-size: 13px;
+	line-height: 15px;
+	margin-bottom: 15px;
+}
+.pay-result-content .pay-money {
+	font-size: 30px;
+	line-height: 38px;
+	font-weight: bold;
+}
+.pay-result-content .pay-money span {
+	font-size: 16px;
+}
+.pay-result-content .pay-way {
+	margin-top: 35px;
+	padding: 30px 20px;
+	border-top: 1px solid #e9e9e9;
+}
+.pay-result-content .pay-way li {
+	text-align: left;
+	font-size: 15px;
+	line-height: 24px;
+	margin-bottom: 10px;
+}
+.pay-result-content .pay-way li span {
+	float: right;
+}
+.color-yellow {
+	color: #e29d28;
 }
