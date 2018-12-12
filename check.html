@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+	<title>审核优惠券</title>
+	<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body style="background: #fff">
+	<!-- header star -->
+	<div class="header">
+		<div class="back">
+			<a href="javascript:;">
+				<img src="./images/back@2x.png" alt="">
+			</a>
+		</div>
+		<h1 class="title">审核优惠券</h1>
+	</div>
+	<!-- header end -->
+	<!-- main star -->
+	<div class="shenhe-view">
+		<div class="head-portrait">
+			<div class="head-img-box">
+				<img src="./images/img_avtar@2x.png" alt="">
+			</div>
+		</div>
+	</div>
+	<ul class="form-lists">
+		<li>昵称 <span class="right">SUNNY</span></li>
+		<li>车牌号 <span class="right">粤-B4QB93</span></li>
+		<!-- <li>优惠券类型 <i class="select-icon"></i>
+			<select name="" id="">
+				<option value="">抵扣券</option>
+				<option value="">时间券</option>
+				<option value="">折扣券</option>
+			</select>
+		</li> -->
+	</ul>
+	<div class="select-quan">
+		<h3>优惠券类型</h3>
+		<div class="select-boxs" id="select-boxs"><span id="select-boxs-span">抵扣券</span><i id="select-icon" class="select-icon"></i></div>
+		<ul class="select-type" id="select-type">
+			<li>抵扣券</li>
+			<li>时间券</li>
+			<li>折扣券</li>
+		</ul>
+	</div>
+	<div class="about-box">
+		<textarea name="" id="" cols="0" rows="5" placeholder="请输入内容"></textarea>
+	</div>
+	<div class="button-wrapper padding-70 pt10">
+		<button class="button">确认发放</button>
+		<!-- <a href="javascript:;" class="button">确认发放</a> -->
+	</div>
+	<!-- main end -->
+
+<!--js star-->
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+	// mui.init();
+	$(function(){
+		var onOff = false;
+		$("#select-boxs").click(function(){
+			onOff = !onOff;
+			if (onOff) {
+				$("#select-type").show();
+				$('#select-icon').attr('class', 'select-icon up')
+			} else {
+				$("#select-type").hide();
+				$('#select-icon').attr('class', 'select-icon')
+			}
+		})
+		$("#select-type li").each(function(){
+			$(this).click(function(){
+				var value = $(this).html();
+				$('#select-boxs-span').html(value);
+				$("#select-type").hide();
+				$('#select-icon').attr('class', 'select-icon')
+			})
+		})
+	})
+</script>
+<!--js end-->
+</body>
+</html>

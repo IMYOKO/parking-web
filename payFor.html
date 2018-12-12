@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+	<title>确认缴费</title>
+	<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body style="background: #f1f5ff">
+	<!-- header star -->
+	<div class="header">
+		<div class="back">
+			<a href="javascript:history.back(-1);">
+				<img src="./images/back@2x.png" alt="">
+			</a>
+		</div>
+		<h1 class="title">确认缴费</h1>
+	</div>
+	<!-- header end -->
+	<!-- main star -->
+	<div class="result-wrapper">
+		<div class="pay-result-content content-payfor">
+			<div class="park-addr">深圳市龙岗人民医院停车场</div>
+			<div class="pay-money"><span>￥</span>35.00</div>
+			<ul class="pay-way">
+				<li>车牌号码： <span>粤-B4QB93</span></li>
+				<li>停车时长： <span>7小时</span></li>
+				<li>入场时间： <span>2018-12-1 14:20</span></li>
+			</ul>
+		</div>
+		<div class="h10"></div>
+		<div class="pay-infor">
+			<h3>支付方式</h3>
+			<ul class="pay-list">
+				<li>
+					<label>
+						<span class="wechat"></span>微信支付 <input type="radio" name="pay" value="wechat" id="" checked><i id="wechat_select"></i>
+					</label>
+				</li>
+				<li>
+					<label>
+						<span class="alipay"></span>支付宝支付 <input type="radio" name="pay" value="alipay" id=""><i id="alipay_select"></i>
+					</label>
+				</li>
+			</ul>
+		</div>
+		<div class="button-wrapper padding-70">
+			<button class="button">立即付款</button>
+			<!-- <button class="button">重新支付</button> -->
+			<!-- <a href="javascript:;" class="button">去缴费</a> -->
+		</div>
+	</div>
+	<!-- main end -->
+
+<!--js star-->
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+	// mui.init();
+	function selectItem(value) {
+		if (value === 'wechat') {
+			$("#wechat_select").attr('class', 'select')
+			$("#alipay_select").attr('class', '')
+		} else {
+			$("#alipay_select").attr('class', 'select')
+			$("#wechat_select").attr('class', '')
+		}
+	}
+	$(function(){
+		var value_def = $("input[type='radio']:checked").val();
+		selectItem(value_def);
+		$("input[type='radio']").click(function(){
+			var value = $(this).val();
+			selectItem(value);
+		})
+	})
+</script>
+<!--js end-->
+</body>
+</html>

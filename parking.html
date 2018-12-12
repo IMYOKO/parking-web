@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
-	<title>车牌缴费</title>
+	<title>扫码存车</title>
 	<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
 	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
@@ -16,7 +16,7 @@
 				<img src="./images/back@2x.png" alt="">
 			</a>
 		</div>
-		<h1 class="title">车牌缴费</h1>
+		<h1 class="title">扫码存车</h1>
 	</div>
 	<!-- header end -->
 	<!-- main star -->
@@ -32,16 +32,27 @@
 				</div>
 				<div class="pay-box-bottom">
 					<ul class="pay-list">
+						<li>停车口：1号口</li>
 						<li>入场时间：2018-12-12 12:22:21</li>
-						<li>停车时长：7小时</li>
-						<!-- <li class="quan"><span>优惠券：</span><a href="javascript:;" class="quan no">暂无可用 <span><img src="./images/icon_n@2x.png" width="7" alt=""></span></a></li> -->
-						<li class="quan"><span>优惠券：</span><a href="javascript:;" class="quan">已使用 <span><img src="./images/icon_n@2x.png" width="7" alt=""></span></a></li>
-						<li>支付金额：<span class="money"><em>35</em>元</span><span class="youhui">已优惠0元</span></li>
 					</ul>
 				</div>
 			</div>
+			<div style="height: 20px;"></div>
+			<div class="pay-box">
+				<div class="pay-box-bottom bottom-parking">
+					<div class="select-contents">
+						<h3>请勾选安全选项(必选)</h3>
+						<div class="item">
+							<label><input class="checkBoxItem" name="checkbox1" value="Item 1" type="checkbox"> 请确认车内无人员</label>
+						</div>
+						<div class="item">
+								<label><input class="checkBoxItem" name="checkbox1" value="Item 1" type="checkbox"> 请确认关闭发动机,拉好手刹</label>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="button-wrapper padding-70">
+		<div class="button-wrapper padding-70 pt10">
 			<button class="button">去缴费</button>
 			<!-- <a href="javascript:;" class="button">去缴费</a> -->
 		</div>
