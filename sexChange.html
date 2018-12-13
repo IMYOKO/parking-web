@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+	<title>编辑性别</title>
+	<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body style="background: #f7f7f7">
+	<!-- header star -->
+	<div class="header">
+		<div class="back">
+			<a href="javascript:history.back(-1);">
+				<img src="./images/back@2x.png" alt="">
+			</a>
+		</div>
+		<h1 class="title">编辑性别</h1>
+		<div class="action-box">保存</div>
+	</div>
+	<!-- header end -->
+	<!-- main star -->
+	<div class="aditor-user-infor">
+		<div class="user-height"></div>
+		<!-- 性别 star -->
+		<div class="sex-wrapper">
+			<div class="sex-item">
+				<label>
+					男 <input type="radio" class="sex-radio" name="sex" value="0"><i></i>
+				</label>
+			</div>
+			<div class="sex-item">
+				<label>
+					女 <input type="radio" class="sex-radio" name="sex" value="1" checked><i></i>
+				</label>
+			</div>
+		</div>
+		<!-- 性别 end -->
+	</div>
+	<!-- main end -->
+
+<!--js star-->
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+	// mui.init();
+
+	// 编辑性别
+	$(function(){
+		$("input[type='radio']:checked").parent().find('i').attr('class', 'select');
+		$("input[type='radio']").click(function(){
+			var value = $(this).val();
+			// selectItem(value);
+			$("input[type='radio']").parent().find('i').attr('class', '');
+			$("input[type='radio']:checked").parent().find('i').attr('class', 'select');
+		})
+	})
+</script>
+<!--js end-->
+</body>
+</html>

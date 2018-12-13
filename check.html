@@ -47,6 +47,20 @@
 			<li>折扣券</li>
 		</ul>
 	</div>
+	<ul class="quan-type-box clearfix">
+		<li>
+			<label>
+				<i></i>
+				<input type="radio" name="quan" value="5">5元抵扣券
+			</label>
+		</li>
+		<li>
+			<label>
+				<i></i>
+				<input type="radio" name="quan" value="5">5元抵扣券
+			</label>
+		</li>
+	</ul>
 	<div class="about-box">
 		<textarea name="" id="" cols="0" rows="5" placeholder="请输入内容"></textarea>
 	</div>
@@ -76,11 +90,20 @@
 		})
 		$("#select-type li").each(function(){
 			$(this).click(function(){
+				onOff = false;
 				var value = $(this).html();
 				$('#select-boxs-span').html(value);
 				$("#select-type").hide();
 				$('#select-icon').attr('class', 'select-icon')
 			})
+		})
+
+		// 选择抵扣券
+		var value_def = $("input[type='radio']:checked").val();
+		$("input[type='radio']").click(function(){
+			var value = $(this).val();
+			$("input[type='radio']").parent().find('i').attr('class', '');
+			$("input[type='radio']:checked").parent().find('i').attr('class', 'select');
 		})
 	})
 </script>

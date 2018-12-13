@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+	<title>收票人信息</title>
+	<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body style="background: #fff">
+	<!-- header star -->
+	<div class="header">
+		<div class="back">
+			<a href="javascript:history.back(-1);">
+				<img src="./images/back@2x.png" alt="">
+			</a>
+		</div>
+		<h1 class="title">收票人信息</h1>
+		<div class="action-box">保存</div>
+	</div>
+	<!-- header end -->
+	<!-- main star -->
+	<div class="bill-wrapper">
+		<ul class="bill-list">
+			<li>
+				<div class="bill-title">请选择发票类型*</div>
+				<div class="bill-content clearfix">
+					<div class="selet-item">
+						<label>
+							<input type="radio" class="bill-type" name="bill-type" value="0" checked><i></i>电子普通发票
+						</label>
+					</div>
+					<div class="selet-item">
+						<label>
+							<input type="radio" class="bill-type" name="bill-type" value="1"><i></i>纸质发票
+						</label>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="bill-title">请选择抬头类型*</div>
+				<div class="bill-content clearfix">
+					<div class="selet-item">
+						<label>
+							<input type="radio" class="bill-type" name="taitou-type" value="0" checked><i></i>企业单位
+						</label>
+					</div>
+					<div class="selet-item">
+						<label>
+							<input type="radio" class="bill-type" name="taitou-type" value="1"><i></i>个人/非企业单位
+						</label>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="bill-title no-margin">发票抬头*</div>
+				<div class="input-item">
+					<input type="text" placeholder="请输入发票抬头">
+				</div>
+			</li>
+			<li>
+				<div class="bill-title no-margin">发票抬头*</div>
+				<div class="input-item">
+					<input type="text" placeholder="请输入个人税号">
+				</div>
+			</li>
+			<li>
+				<div class="bill-title no-margin">发票金额*</div>
+				<div class="input-item">
+					<p>75元</p>
+				</div>
+			</li>
+			<li>
+				<div class="bill-title no-margin">接收邮箱</div>
+				<div class="input-item">
+					<input type="text" placeholder="请输入邮箱，非必填">
+				</div>
+			</li>
+			<li>
+				<div class="bill-title no-margin">联系电话</div>
+				<div class="input-item">
+					<input type="text" placeholder="请输入手机号码">
+				</div>
+			</li>
+			<li>
+				<div class="bill-title no-margin">所在地区</div>
+				<div class="input-item">
+					<input type="text" placeholder="省、市、区">
+				</div>
+			</li>
+			<li>
+				<div class="bill-title no-margin">详细地址</div>
+				<div class="input-item">
+					<input type="text" placeholder="例：道路、小区、楼栋号、单元室等">
+				</div>
+			</li>
+			<li>
+				<div class="bill-title no-margin">更多信息</div>
+				<div class="input-item">
+					<input type="text" placeholder="填写备注信息等，非必填">
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!-- main end -->
+
+<!--js star-->
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+	// mui.init();
+	$(function(){
+		$("input[type='radio']:checked").parent().find('i').attr('class', 'select');
+		$("input[type='radio']").click(function(){
+			var value = $(this).val();
+			// selectItem(value);
+			$("input[type='radio']").parent().find('i').attr('class', '');
+			$("input[type='radio']:checked").parent().find('i').attr('class', 'select');
+		})
+	})
+</script>
+<!--js end-->
+</body>
+</html>

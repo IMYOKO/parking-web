@@ -3,29 +3,29 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
-	<title>首页</title>
+	<title>编辑车牌</title>
 	<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
 	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
-<body>
+<body style="background: #f7f7f7">
 	<!-- header star -->
 	<div class="header">
-		<div class="back">
-			<a href="javascript:;">
-				<img src="./images/back@2x.png" alt="">
-			</a>
+			<div class="back">
+				<a href="javascript:history.back(-1);">
+					<img src="./images/back@2x.png" alt="">
+				</a>
+			</div>
+			<h1 class="title">编辑车牌</h1>
+			<div class="action-box">保存</div>
 		</div>
-		<h1 class="title">缴费停车</h1>
-	</div>
 	<!-- header end -->
 	<!-- main star -->
 	<div class="main-wrapper">
 		<div class="h44"></div>
 		<div class="h10"></div>
 		<div class="car-form">
-			<h2>请输入车牌号，完成缴费</h2>
-			<div class="car-num-wrapper" id="car-num-wrapper">
+			<div class="car-num-wrapper" id="car-num-wrapper" style="padding-top: 15px; background: #fff;">
 				<div class="car-box"></div>
 				<div class="car-box"></div>
 				<div class="car-box"></div>
@@ -35,42 +35,8 @@
 				<div class="car-box"></div>
 				<div class="car-box"></div>
 			</div>
-			<div class="select-box clearfix">
-				<label>
-					<input class="checkBoxItem" name="checkbox1" value="Item 1" type="checkbox"> 新能源
-				</label>
-			</div>
+			<div class="select-box clearfix"></div>
 		</div>
-		<div class="h10"></div>
-
-		<div class="button-wrapper">
-			<button class="button">确认车牌</button>
-		</div>
-
-		<div class="history-list">
-			<div class="title">历史缴费车辆</div>
-			<ul class="list clearfix" id="history-list">
-				<li>
-					<span>粤B4QB934</span>
-				</li>
-				<li>
-					<span>粤B4QB93</span>
-				</li>
-				<li>
-					<span>粤B4QB93</span>
-				</li>
-			</ul>
-		</div>
-		<a href="./result.html">result</a><br/>
-		<a href="./pay.html">pay</a><br/>
-		<a href="./payResult.html">payResult</a><br/>
-		<a href="./payFor.html">payFor</a><br/>
-		<a href="./parking.html">parking</a><br/>
-		<a href="./user.html">user</a><br/>
-		<a href="./parkResult.html">parkResult</a><br/>
-		<a href="./check.html">check</a><br/>
-		<a href="./parkList.html">parkList</a><br/>
-		<a href="./bill.html">bill</a><br/>
 	</div>
 	<!-- main end -->
 
@@ -180,18 +146,6 @@
 	<!-- key word end -->
 
 <!--js star-->
-<!-- <script type="text/javascript" src="js/swiper.min.js"></script>
-<script type="text/javascript">
-	var mySwiper = new Swiper('#swiper-container', {
-		loop : true,
-		effect : 'slide',
-		pagination: '.swiper-pagination'
-	});
-	/*如果只有一个slide就锁住swiper*/
-	if(mySwiper.slides.length<=3){
-		mySwiper.lockSwipes();
-	}
-</script> -->
 <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
 <script type="text/javascript" src="js/mui.min.js"></script>
 <script type="text/javascript" charset="utf-8">
@@ -293,16 +247,6 @@
 					$("#key-word-addr").addClass('show');
 				}
 			})
-		})
-
-		// 点击历史车辆
-		$('#history-list span').click(function() {
-			var text = $(this).html();
-			text = text.split('');
-			$('#car-num-wrapper .car-box').html('');
-			for(let i = 0; i < text.length; i ++) {
-				$('#car-num-wrapper .car-box').eq(i).html(text[i]);
-			}
 		})
 	});
 </script>

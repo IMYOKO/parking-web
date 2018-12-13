@@ -45,7 +45,18 @@
 	height: 22px;
 	margin-bottom: 6px;
 }
+.header .action-box {
+	color: #fff;
+	font-size: 15px;
+	position: absolute;
+	right: 8px;
+	top: 0;
+	padding: 0 12px;
+	height: 44px;
+	line-height: 44px;
+}
 
+/* main */
 .car-form h2 {
 	color: #333;
 	font-size: 16px;
@@ -70,6 +81,7 @@
 	font-weight: bold;
 	line-height: 36px;
 	font-size: 18px;
+	background: #fff;
 	text-align: center;
 	box-shadow: 0px 2px 5px #cbcbcb;
 	border: 1px solid #cfcfcf;
@@ -672,4 +684,262 @@
 	font-size: 14px;
 	border: none;
 	background: #e5e5e5;
+}
+.quan-type-box {
+	padding: 5px 14px 10px;
+}
+.quan-type-box li {
+	float: left;
+	margin-right: 20px;
+	line-height: 30px;
+}
+.quan-type-box li label {
+	display: block;
+	position: relative;
+	padding-left: 32px;
+}
+.quan-type-box li label input {
+	position: absolute;
+	left: 3px;
+	top: 50%;
+	margin-top: -6px;
+	opacity: 0;
+}
+.quan-type-box li label i {
+	display: block;
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -10px;
+	z-index: 10;
+	background: url(../images/select_no@2x.png) center center no-repeat;
+	background-size: contain;
+}
+.quan-type-box li label i.select {
+	background: url(../images/select@2x.png) center center no-repeat;
+	background-size: contain;
+}
+
+/* 停车记录 */
+.park-list-wrapper {
+	padding: 64px 18px 20px;
+}
+.park-list li {
+	border-radius: 5px;
+	background: #fff;
+	padding: 15px 20px;
+	position: relative;
+	box-shadow: 0px 3px 8px #355fb9;
+	margin-bottom: 25px;
+}
+.park-list li >h3 {
+	color: #000;
+	font-size: 16px;
+	line-height: 24px;
+	margin-bottom: 10px;
+}
+.park-list li >p {
+	font-size: 15px;
+	line-height: 18px;
+	margin-bottom: 5px;
+}
+.park-list li .park-money {
+	position: absolute;
+	right: 20px;
+	top: 15px;
+	z-index: 10;
+	text-align: right;
+}
+.park-list li .park-money h2 {
+	font-size: 24px;
+	line-height: 26px;
+	color: #548ed1;
+	margin-bottom: 3px;
+}
+.park-list li .park-money h2 span {
+	font-size: 15px;
+	color: #a6a6a6;
+}
+.park-list li .park-money h5 {
+	color: #548ed1;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+/* 编辑个人资料 */
+.aditor-user-infor {
+	padding-top: 44px;
+}
+.aditor-user-infor .user-header {
+	padding: 30px 0;
+	text-align: center;
+}
+.aditor-user-infor .user-header .user-img {
+	height: 73px;
+	width: 73px;
+	overflow: hidden;
+	border-radius: 73px;
+	display: inline-block;
+}
+.aditor-user-infor .user-header .user-img img {
+	height: 73px;
+	width: 73px;
+}
+.aditor-user-infor .user-lists {
+	padding-left: 14px;
+}
+.aditor-user-infor .user-lists li,
+.aditor-user-infor .user-lists li a {
+	display: block;
+	color: #000;
+	height: 50px;
+	line-height: 50px;
+	padding-right: 14px;
+	position: relative;
+	border-bottom: 1px solid #e9e9e9;
+}
+.aditor-user-infor .user-lists li a {
+	padding-right: 14px;
+}
+.aditor-user-infor .user-lists li span {
+	float: right;
+}
+.aditor-user-infor .user-lists li a span {
+	color: #bebebe;
+}
+.aditor-user-infor .user-lists li a i {
+	display: block;
+	position: absolute;
+	right: 0px;
+	top: 50%;
+	width: 8px;
+	height: 14px;
+	margin-top: -7px;
+	background: url(../images/user_back@2x.png) center center no-repeat;
+	background-size: contain;
+}
+.aditor-user-infor .sex-wrapper {
+	padding-left: 14px;
+	background: #fff;
+}
+.aditor-user-infor .sex-wrapper .sex-item,
+.aditor-user-infor .sex-wrapper .sex-item label {
+	display: block;
+	color: #000;
+	height: 50px;
+	line-height: 50px;
+	padding-right: 14px;
+	position: relative;
+	border-bottom: 1px solid #e9e9e9;
+}
+.aditor-user-infor .sex-wrapper .sex-item label input {
+	position: absolute;
+	right: 3px;
+	top: 50%;
+	margin-top: -5px;
+	opacity: 0;
+}
+.aditor-user-infor .sex-wrapper .sex-item label i {
+	display: block;
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -10px;
+	z-index: 10;
+	background: url(../images/select_no@2x.png) center center no-repeat;
+	background-size: contain;
+}
+.aditor-user-infor .sex-wrapper .sex-item label i.select {
+	background: url(../images/select@2x.png) center center no-repeat;
+	background-size: contain;
+}
+.aditor-user-infor .input-box input {
+	border-radius: 0;
+	border-right: none;
+	border-left: none;
+	padding: 15px;
+	font-size: 15px;
+	height: 50px;
+}
+.aditor-user-infor .user-height {
+	height: 10px;
+	background: #f7f7f7;
+}
+
+/* 我要发票 */
+.bill-wrapper {
+	padding-top: 44px;
+}
+.bill-list {
+	padding-left: 14px;
+	padding-top: 15px;
+	padding-bottom: 20px;
+}
+.bill-list li {
+	margin-bottom: 10px;
+	border-bottom: 1px solid #e6e6e6;
+}
+.bill-list li .bill-title {
+	color: #333;
+	font-size: 15px;
+	line-height: 18px;
+	margin-bottom: 15px
+}
+.bill-list li .bill-title.no-margin {
+	margin-bottom: 0px
+}
+.bill-content {
+	padding-bottom: 15px;
+}
+.bill-content .selet-item {
+	width: 50%;
+	float: left;
+}
+.bill-content .selet-item label {
+	position: relative;
+	display: block;
+	height: 24px;
+	font-size: 13px;
+	padding-left: 30px;
+	line-height: 24px;
+}
+.bill-content .selet-item label input {
+	position: absolute;
+	left: 3px;
+	top: 50%;
+	margin-top: -3px;
+	opacity: 0;
+}
+.bill-content .selet-item label i {
+	display: block;
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -10px;
+	z-index: 10;
+	background: url(../images/select_no@2x.png) center center no-repeat;
+	background-size: contain;
+}
+.bill-content .selet-item label i.select {
+	background: url(../images/select@2x.png) center center no-repeat;
+	background-size: contain;
+}
+.bill-list li .input-item input {
+	border-radius: 0;
+	border: none;
+	height: 40px;
+	font-size: 14px;
+	padding: 0 10px 0 0;
+	margin-bottom: 2px;
+}
+.bill-list li .input-item p {
+	color: #4681ff;
+	height: 40px;
+	line-height: 40px;
 }
