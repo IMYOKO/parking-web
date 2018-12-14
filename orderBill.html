@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+	<title>按订单开发票</title>
+	<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body style="background: #4681ff">
+	<!-- header star -->
+	<div class="header">
+		<div class="back">
+			<a href="javascript:history.back(-1);">
+				<img src="./images/back@2x.png" alt="">
+			</a>
+		</div>
+		<h1 class="title">按订单开发票</h1>
+	</div>
+	<!-- header end -->
+	<!-- main star -->
+	<div class="order-bill-wrapper">
+		<ul class="order-bill-list">
+			<li>
+				<div class="month">12月</div>
+				<ul class="order-parking-list">
+					<li>
+						<label>
+							<h3>天虹商场停车场</h3>
+							<p>车牌号：粤B4QB93</p>
+							<p>入场时间：2018-12-1 14:00</p>
+							<p>出场时间：2018-12-1 21:20</p>
+							<div class="park-money">
+								<h2>35.0<span>元</span></h2>
+								<h5>停车7小时20分</h5>
+							</div>
+							<input class="checkBoxItem" name="checkbox"  type="checkbox">
+						</label>
+					</li>
+					<li>
+						<label>
+							<h3>天虹商场停车场</h3>
+							<p>车牌号：粤B4QB93</p>
+							<p>入场时间：2018-12-1 14:00</p>
+							<p>出场时间：2018-12-1 21:20</p>
+							<div class="park-money">
+								<h2>35.0<span>元</span></h2>
+								<h5>停车7小时20分</h5>
+							</div>
+							<input class="checkBoxItem" name="checkbox"  type="checkbox">
+						</label>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="month">11月</div>
+				<ul class="order-parking-list">
+					<li>
+						<label>
+							<h3>天虹商场停车场</h3>
+							<p>车牌号：粤B4QB93</p>
+							<p>入场时间：2018-12-1 14:00</p>
+							<p>出场时间：2018-12-1 21:20</p>
+							<div class="park-money">
+								<h2>35.0<span>元</span></h2>
+								<h5>停车7小时20分</h5>
+							</div>
+							<input class="checkBoxItem" name="checkbox"  type="checkbox">
+						</label>
+					</li>
+					<li>
+						<label>
+							<h3>天虹商场停车场</h3>
+							<p>车牌号：粤B4QB93</p>
+							<p>入场时间：2018-12-1 14:00</p>
+							<p>出场时间：2018-12-1 21:20</p>
+							<div class="park-money">
+								<h2>35.0<span>元</span></h2>
+								<h5>停车7小时20分</h5>
+							</div>
+							<input class="checkBoxItem" name="checkbox"  type="checkbox">
+						</label>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="check-bottom-wrapper">
+		<div class="baoyou"><span id="num">0</span>个行程，共<span id="money">0</span>元(满200包邮)</div>
+		<div class="check-wrapper">
+			<label><input class="checkBoxItem" name="checkBoxItem"  type="checkbox"> 全选</label>
+			<a href="./bill.html">去使用</a>
+		</div>
+	</div>
+	<!-- main end -->
+
+<!--js star-->
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+	// mui.init();
+	$(function(){
+
+		// 全部选择
+		var total = 0;
+		$('input[name="checkbox"]').each(function(){
+			$(this).click(function(){
+				var len = $('input[name="checkbox"]').length;
+				var num = $('input[name="checkbox"]:checked').length;
+				$("#num").html(num);
+				var isChecked = $(this).prop("checked");
+				var money = parseFloat($(this).parent().find('h2').text());
+				if (isChecked) {
+					total += money;
+				} else {
+					total -= money;
+				}
+				$('#money').html(total);
+				if (num === len) {
+					$('input[name="checkBoxItem"]').prop('checked', true);
+				} else {
+					$('input[name="checkBoxItem"]').prop('checked', false);
+				}
+			})
+		})
+
+		// 全选
+		$('input[name="checkBoxItem"]').click(function(){
+			var isChecked = $('input[name="checkBoxItem"]').prop("checked");
+			total = 0;
+			var num = 0;
+			if(isChecked) {
+				$('input[name="checkbox"]').prop('checked', true);
+				num = $('input[name="checkbox"]:checked').length;
+				for(let i = 0; i < num; i ++) {
+					total += parseFloat($('input[name="checkbox"]:checked').parent().find('h2').text());
+				}
+			} else {
+				$('input[name="checkbox"]').prop('checked', false);
+				num = 0;
+				total = 0;
+			}
+			
+			$("#num").html(num);
+			
+			$('#money').html(total);
+		})
+
+	})
+</script>
+<!--js end-->
+</body>
+</html>

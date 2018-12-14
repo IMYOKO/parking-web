@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+	<title>优惠券</title>
+	<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body style="background: #fff">
+	<!-- header star -->
+	<div class="header">
+		<div class="back">
+			<a href="javascript:history.back(-1);">
+				<img src="./images/back@2x.png" alt="">
+			</a>
+		</div>
+		<h1 class="title">优惠券</h1>
+	</div>
+	<!-- header end -->
+	<!-- main star -->
+	<div class="coupons-nav" id="coupons-nav">
+		<span class="active">未使用</span>
+		<span>已使用</span>
+	</div>
+	<div class="coupons-wrapper" id="coupons-wrapper">
+		<div class="coupons-content active">
+			<ul class="coupons-list">
+				<li>
+					<div class="items">
+						<div class="top">
+							<h2><span>￥</span>5</h2>
+							<p>西乡时代城优惠</p>
+						</div>
+						<div class="bottom">
+							<p><img src="./images/time@2x.png" width="13" alt=""> 有效期<em>2018.11.12</em>日<span>可直接抵用</span></p>
+						</div>
+						<div class="left">
+							<a href="javascript:;">去<br/>使<br/>用</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="items">
+						<div class="top">
+							<h2><span>￥</span>50</h2>
+							<p>西乡时代城优惠</p>
+						</div>
+						<div class="bottom">
+							<p><img src="./images/time@2x.png" width="13" alt=""> 有效期<em>2018.11.12</em>日<span>可直接抵用</span></p>
+						</div>
+						<div class="left">
+							<a href="javascript:;">去<br/>使<br/>用</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="items">
+						<div class="top">
+							<h2><span>￥</span>5</h2>
+							<p>西乡时代城优惠</p>
+						</div>
+						<div class="bottom">
+							<p><img src="./images/time@2x.png" width="13" alt=""> 有效期<em>2018.11.12</em>日<span>可直接抵用</span></p>
+						</div>
+						<div class="left">
+							<a href="javascript:;">去<br/>使<br/>用</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="coupons-content">
+				<ul class="coupons-list">
+						<li>
+							<div class="items items-02">
+								<div class="top">
+									<h2><span>￥</span>5</h2>
+									<p>西乡时代城优惠</p>
+								</div>
+								<div class="bottom">
+									<p><img src="./images/time@2x.png" width="13" alt=""> 已失效<span>可直接抵用</span></p>
+								</div>
+								<div class="left">
+									<a href="javascript:;" class="no">已<br/>使<br/>用</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="items items-02">
+								<div class="top">
+									<h2><span>￥</span>5</h2>
+									<p>西乡时代城优惠</p>
+								</div>
+								<div class="bottom">
+									<p><img src="./images/time@2x.png" width="13" alt=""> 已失效<span>可直接抵用</span></p>
+								</div>
+								<div class="left">
+									<a href="javascript:;" class="no">已<br/>使<br/>用</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="items items-02">
+								<div class="top">
+									<h2><span>￥</span>5</h2>
+									<p>西乡时代城优惠</p>
+								</div>
+								<div class="bottom">
+									<p><img src="./images/time@2x.png" width="13" alt=""> 已失效<span>可直接抵用</span></p>
+								</div>
+								<div class="left">
+									<a href="javascript:;" class="no">已<br/>使<br/>用</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+		</div>
+	</div>
+	<!-- main end -->
+
+<!--js star-->
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+	// mui.init();
+	$(function(){
+		$('#coupons-nav span').each(function(){
+			$(this).click(function(){
+				var index = $(this).index();
+				$(this).siblings().removeClass('active');
+				$(this).addClass('active');
+				$('#coupons-wrapper .coupons-content').removeClass('active');
+				$('#coupons-wrapper .coupons-content').eq(index).addClass('active');
+			})
+		})
+	})
+</script>
+<!--js end-->
+</body>
+</html>
