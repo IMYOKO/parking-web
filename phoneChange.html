@@ -27,6 +27,10 @@
 		<div class="input-box">
 			<input type="tel" placeholder="请输入手机号码">
 		</div>
+		<div class="input-box">
+			<div class="code-box" id="code-box">获取验证码</div>
+			<input type="text" placeholder="请输入手机验证码">
+		</div>
 		<!-- 地区 end -->
 		
 	</div>
@@ -38,6 +42,28 @@
 <script type="text/javascript" src="js/mui.min.js"></script>
 <script type="text/javascript" charset="utf-8">
 	// mui.init();
+	$(function(){
+		var hasSend = false;
+		$('#code-box').click(function(){
+			if(hasSend) {
+				return false;
+			}
+			hasSend = true;
+			var count = 30;
+			var _this = this;
+			var timer = setInterval(function(){
+				$(_this).html(count + ' s');
+				$(_this).addClass('default');
+				count --;
+				if (count <= 0) {
+					hasSend = false;
+					$(_this).html('获取验证码');
+					$(_this).removeClass('default');
+					clearInterval(timer)
+				}
+			}, 1000)
+		})
+	})
 </script>
 <!--js end-->
 </body>

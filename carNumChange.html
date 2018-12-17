@@ -26,8 +26,8 @@
 		<div class="h10"></div>
 		<div class="car-form">
 			<div class="car-num-wrapper" id="car-num-wrapper" style="padding-top: 15px; background: #fff;">
-				<div class="car-box"></div>
-				<div class="car-box"></div>
+				<div class="car-box on active"></div>
+				<div class="car-box on"></div>
 				<div class="car-box"></div>
 				<div class="car-box"></div>
 				<div class="car-box"></div>
@@ -36,12 +36,52 @@
 				<div class="car-box"></div>
 			</div>
 			<div class="select-box clearfix"></div>
+
+			<!-- 已绑定车牌 star -->
+			<div class="has-band-content">
+				<h3>已绑定车牌</h3>
+				<ul class="has-band-list" id="has-band-list">
+					<li>
+						<div class="has-band-box">
+							<div class="del">
+								<img src="./images/del@2x.png" alt="">
+							</div>
+							<p>粤B4QB934</p>
+						</div>
+					</li>
+					<li>
+						<div class="has-band-box">
+							<div class="del">
+								<img src="./images/del@2x.png" alt="">
+							</div>
+							<p>粤B4QB935</p>
+						</div>
+					</li>
+					<li>
+						<div class="has-band-box">
+							<div class="del">
+								<img src="./images/del@2x.png" alt="">
+							</div>
+							<p>粤B4QB935</p>
+						</div>
+					</li>
+					<li>
+						<div class="has-band-box">
+							<div class="del">
+								<img src="./images/del@2x.png" alt="">
+							</div>
+							<p>粤B4QB935</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- 已绑定车牌 end -->
 		</div>
 	</div>
 	<!-- main end -->
 
 	<!-- key word star -->
-	<div class="key-word" id="key-word-addr">
+	<div class="key-word show" id="key-word-addr">
 		<div class="midder-wrapper">
 			<div class="closed-box">
 				<span id="key-word-addr-closed">关闭</span>
@@ -109,7 +149,7 @@
 					<div class="key-item">9</div>
 					<div class="key-item">0</div>
 				</div>
-				<div class="key-box key-box-90">
+				<div class="key-box">
 					<div class="key-item">Q</div>
 					<div class="key-item">W</div>
 					<div class="key-item">E</div>
@@ -119,8 +159,9 @@
 					<div class="key-item">U</div>
 					<div class="key-item">O</div>
 					<div class="key-item">P</div>
+					<div class="key-item">港</div>
 				</div>
-				<div class="key-box key-box-90">
+				<div class="key-box">
 					<div class="key-item">A</div>
 					<div class="key-item">S</div>
 					<div class="key-item">D</div>
@@ -130,6 +171,7 @@
 					<div class="key-item">J</div>
 					<div class="key-item">K</div>
 					<div class="key-item">L</div>
+					<div class="key-item">警</div>
 				</div>
 				<div class="key-box key-box-70">
 					<div class="key-item">Z</div>
@@ -246,6 +288,18 @@
 					$("#key-word-num").removeClass('show');
 					$("#key-word-addr").addClass('show');
 				}
+			})
+		})
+
+		// 删除车牌
+		$("#has-band-list .del").each(function(){
+			$(this).click(function(){
+				// 获取下标
+				var index = $(this).parent().parent().index();
+				// 请求数据
+
+				// OK 后移除dom
+				$("#has-band-list li").eq(index).remove();
 			})
 		})
 	});

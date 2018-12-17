@@ -1185,3 +1185,71 @@
 	top: 6px;
 	z-index: 10;
 }
+
+/* addclass */
+.aditor-user-infor .input-box {
+	position: relative;
+}
+.aditor-user-infor .input-box .code-box {
+	position: absolute;
+	right: 15px;
+	top: 5px;
+	z-index: 10;
+	width: 100px;
+	height: 40px;
+	font-size: 14px;
+	color: #fff;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+	background: #366afc;
+}
+.aditor-user-infor .input-box .code-box.default {
+	cursor: default;
+	background: #d2d2d2;
+}
+.car-num-wrapper .car-box.on {
+	color: #4681ff;
+}
+
+.has-band-content {
+	padding: 0 15px 20px;
+}
+.has-band-content h3 {
+	font-size: 13px;
+	line-height: 16px;
+	margin-bottom: 10px;
+}
+.has-band-list li {
+	margin-bottom: 15px;
+	background: #fff;
+	border: 1px solid #d2d2d2;
+}
+.has-band-box {
+	padding: 0 20px;
+	height: 50px;
+	line-height: 50px;
+	position: relative;
+	box-shadow: 0px 2px 5px #cbcbcb;
+}
+.has-band-box p {
+	color: #333;
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 6px;
+}
+.has-band-box .del {
+	width: 44px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 10;
+}
+.has-band-box .del img {
+	width: 24px;
+	height: 24px;
+}
